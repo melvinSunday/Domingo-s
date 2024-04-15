@@ -290,7 +290,7 @@ header {
     height: fit-content;
     background-color: rgba(251, 246, 242, 0.725);
 
-    padding-top: 5.6rem;
+    padding-top: 6rem;
 
 
 }
@@ -1221,9 +1221,9 @@ border-bottom: 2px solid orange;
         top: 100px;
         backdrop-filter: blur(15px);
         border-radius: 20px;
-        width: 70%;
+        width: 90%;
         padding: 50px;
-        background-color: #4d433aa0;
+        background-color: #191919;
         text-align: left;
         left: 50%;
         transform: translateX(-50%);
@@ -1485,10 +1485,12 @@ text-align: center;
 @media(max-width:931px){ 
 
     .copyright{
-    padding-bottom: 0px;
+    padding:20px;
     }
 
-
+.copyright .c-name {
+    padding-bottom: 0;
+}
 
 .box-wrap {
     flex-direction: column;

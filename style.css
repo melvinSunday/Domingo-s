@@ -515,7 +515,6 @@ padding: 20px;
     font-size: 1.4rem;
     margin-top: 30px;
     padding-left: 10px;
-
     border-left: 5px solid #EBB22F;
 }
 
@@ -988,8 +987,10 @@ border-bottom: 2px solid orange;
 /*noteeee*/
 .note {
     position: fixed;
-    top: 75px;
+    top: 95px;
     left: 50%;
+    width: 100%;
+    max-width: 990px;
     z-index: 99;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.9);
@@ -1380,17 +1381,17 @@ justify-content: center;
 
  
     .services-wrap {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 0;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin: 0 auto;
-        justify-items: center;
-        width: 100%;
-max-width: 890px;
-    }
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0 auto;
+            justify-items: center;
+            width: 100%;
+            max-width: 890px;
+        }
 
     .masterC,
     .qualityF,
@@ -1552,7 +1553,7 @@ border-radius: 10px;
         max-width: 600px;
     }
 
-
+  
     .row1 {
         margin: 0;
         gap: 0;
@@ -1596,9 +1597,16 @@ border-radius: 10px;
 
 @media(max-width:600px) {
 .about-content-wrap {
-        max-width: 500px;
+        max-width: 590px;
     }
+  .section2 h3 {
+      border: 1px solid black;
+  }
 
+  .welcome {
+    padding: 0;
+
+  }
 
     .row1 {
         margin-left: 0;
@@ -1720,6 +1728,7 @@ max-width: 400px;
     font-size: 0.9rem;
     max-width: 480px;
     width: 100%;
+    padding: 15px;
     text-align: center;
     margin: 0 auto;
    }
@@ -1875,6 +1884,17 @@ max-width: 400px;
     }
 }
 
+@media(max-width:482px) {
+.exp-wrap {
+    align-items: flex-start;
+margin: 0 auto;
+width: 100%;
+    flex-direction: column;
+}
+
+
+
+}
 @media(max-width:444px) {
     .bg-hero {
         min-height: 810px;
@@ -1929,4 +1949,21 @@ max-width: 400px;
         float: left;
         margin-top: 20px;
     }
+}
+
+
+@media(max-width:430px) {
+
+.services-wrap {
+    margin-top: 35px;
+}
+
+.welcome {
+    padding: 0;
+}
+
+.section2 h3 {
+max-width: 800px;
+border: 1px solid black;
+}
 }

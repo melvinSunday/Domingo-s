@@ -852,7 +852,7 @@ border-bottom: 2px solid orange;
     color: #EBB22F;
     border-top: 1px solid rgba(255, 255, 255, 0.127);
     padding: 20px;
-    padding-bottom: 0;
+    padding-bottom: 20px;
 
 }
 
@@ -1046,6 +1046,13 @@ border-bottom: 2px solid orange;
     display: none;
 
 }
+
+.VC {
+    display: none;
+
+}
+
+
 
 
 
@@ -1478,8 +1485,10 @@ text-align: center;
 @media(max-width:931px){ 
 
     .copyright{
-        padding: 20px;
+    padding-bottom: 0px;
     }
+
+
 
 .box-wrap {
     flex-direction: column;
@@ -1502,6 +1511,25 @@ border-radius: 10px;
 
 .box h4 {
     font-size: 2.5rem;
+}
+
+.VC {
+display: block;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+}
+
+#num {
+    margin: 0 auto;
+}
+
+.VC p {
+    text-align: center;
+    color: white;
+    font-family: jost;
 }
 
 }

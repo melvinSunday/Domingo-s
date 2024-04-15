@@ -850,8 +850,8 @@ border-bottom: 2px solid orange;
     font-family: 'nunito';
     color: #EBB22F;
     border-top: 1px solid rgba(255, 255, 255, 0.127);
-
     padding: 20px;
+    padding-bottom: 0;
 
 }
 
@@ -1210,7 +1210,7 @@ border-bottom: 2px solid orange;
 
     .navlinks {
         position: fixed;
-        top: 80px;
+        top: 100px;
         backdrop-filter: blur(15px);
         border-radius: 20px;
         width: 70%;
@@ -1476,13 +1476,25 @@ text-align: center;
 
 @media(max-width:931px){ 
 
+    .copyright{
+        padding: 20px;
+    }
+
 .box-wrap {
     flex-direction: column;
     justify-content: center;
+    max-width: 740px;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 .box-wrap .box {
 text-align: center;
+max-width: 800px;
+padding: 20px;
+width: 100%;
+margin: 0 auto;
 background-color: #a9a28d3c;
 border-radius: 10px;
 }

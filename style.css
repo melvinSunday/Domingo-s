@@ -1180,7 +1180,7 @@ border-bottom: 2px solid orange;
 
     .form-wrap form {
         margin: 0 auto;
-        width: 80%;
+        width: 100%;
     }
 
 }
@@ -1599,9 +1599,7 @@ border-radius: 10px;
 .about-content-wrap {
         max-width: 590px;
     }
-  .section2 h3 {
-      border: 1px solid black;
-  }
+ 
 
   .welcome {
     padding: 0;
@@ -1958,6 +1956,5 @@ max-width: 400px;
 .section2 h3 {
 max-width: 800px;
 font-size: 2.1rem;
-border: 1px solid black;
 }
 }

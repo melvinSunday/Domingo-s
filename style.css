@@ -35,13 +35,29 @@ body {
     max-width: 1440px;
 }
 
+
 .bg-hero {
     position: relative;
-    background: url(images/bg-hero.jpg) no-repeat center center scroll;
+  
     max-height: 800px;
     background-size: cover;
     top: 0;
+        height: 100vh;
     width: 100%;
+}
+
+.bg-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    background: linear-gradient(to right, rgba(25, 25, 25, 0.87) 0%, rgba(25, 25, 25, 0.87) 100%), url(images/bg-hero.jpg) no-repeat center center;
+    background-size: cover;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .bg-hero::after {
@@ -51,7 +67,9 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #191919df;
+    width: 100%;
+    height: 100%;
+
 }
 
 header {
@@ -59,7 +77,8 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1440px;
+    max-width: 100%;
+    left: 0;
     margin: 0 auto;
     z-index: 9;
     transition: background-color 0.5s ease;
@@ -107,6 +126,7 @@ header {
 .navlinks {
     z-index: 9;
     display: flex;
+
     align-items: center;
     margin-right: 50px;
 }
@@ -205,19 +225,13 @@ header {
     transition: all 0.5s ease;
 }
 
-.bg-hero {
-    background: url(images/bg-hero.jpg) no-repeat center center scroll;
-    height: 110vh;
-    background-size: cover;
-    top: 0;
-    width: 100%;
-}
+
 
 
 
 .spin-wrap {
     z-index: 1;
-    top: 100px;
+    top: 20%;
     position: absolute;
     width: fit-content;
     padding: 20px;
@@ -229,17 +243,12 @@ header {
 
 
 .spin img {
-
     z-index: 1;
     float: right;
     right: 100px;
     top: 135px;
     max-width: 480px;
-
-
     animation: spin 50s linear infinite;
-
-
 }
 
 @keyframes spin {
@@ -277,7 +286,6 @@ header {
     font-size: 4.5rem;
     line-height: 1.2;
     font-weight: bold;
-
 }
 
 .title p {
@@ -287,13 +295,29 @@ header {
     margin-top: 20px;
 }
 
+.wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
 .section1 {
+    position: relative;
     height: fit-content;
-    background-color: rgba(251, 246, 242, 0.725);
-
     padding-top: 6rem;
+}
 
-
+.section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+background-color: rgba(251, 246, 242, 0.725);
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .services-wrap {
@@ -339,6 +363,7 @@ header {
     margin-top: 50px;
     background-color: white;
     padding: 40px 20px 40px 20px;
+    z-index: 1;
     height: fit-content;
     width: 22.4%;
     transition: all 0.5s ease;
@@ -401,10 +426,23 @@ header {
 
 .section2 {
     padding-bottom: 7rem;
+    position: relative;
     display: flex;
     padding-top: 7rem;
     background-color: rgba(251, 246, 242, 0.725);
 
+}
+
+.section2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+background-color: rgba(251, 246, 242, 0.725);
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .about-content-wrap {
@@ -606,10 +644,21 @@ background-color: #b68a22;
 
 .section3 {
     min-height: 800px;
-
-    background-color: #fae7c957;
+    background-color: #fff8ee;
     padding-top: 6rem;
+    position: relative;
+}
 
+.section3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+background-color: #fff8ee;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .section3>div {
@@ -779,12 +828,24 @@ border-bottom: 2px solid orange;
 }
 
 .copyright {
-
     width: 100%;
     background-color:#191919;
     padding: 60px;
     padding-bottom: 0;
     margin: 0 auto;
+    position: relative;
+}
+
+.copyright::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+background-color: #191919;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .box-wrap {
@@ -860,8 +921,21 @@ border-bottom: 2px solid orange;
 
 .section4 {
     min-height: 800px;
-    background-color: rgba(251, 246, 242, 0.725);
+    background-color: rgb(251, 246, 242);
     padding-top: 6rem;
+    position: relative;
+}
+
+.section4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+background-color: rgb(251, 246, 242);
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .section4 h1 {

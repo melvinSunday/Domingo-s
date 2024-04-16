@@ -36,33 +36,39 @@ body {
 
 .bg-hero {
     position: relative;
-    background: url(images/bg-hero.jpg) no-repeat center center scroll;
     max-height: 400px;
     background-size: cover;
     top: 0;
+    height: 100vh;
     width: 100%;
 }
-
-.bg-hero::after {
+.bg-hero::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-background-color: #1a170ce6;
+    left: 50%;
+    width: 100vw;
+    background: linear-gradient(to right, rgba(25, 25, 25, 0.87) 0%, rgba(25, 25, 25, 0.87) 100%), url(images/bg-hero.jpg) no-repeat center center;
+    background-size: cover;
+    transform: translateX(-50%);
+    z-index: -1;
 }
+
 header {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
+    width: 100vw;
+
+    max-width: 100%;
+
+    left: 0;
+    margin: 0;
     z-index: 9;
     transition: background-color 0.5s ease;
 }
-
 #myHeader.scrolled {
 
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.302);
@@ -204,13 +210,6 @@ background-color: #5b585897;
     transition: all 0.5s ease;
 }
 
-.bg-hero {
-    background: url(images/bg-hero.jpg) no-repeat center center scroll;
-    height: 110vh;
-    background-size: cover;
-    top: 0;
-    width: 100%;
-}
 
 
 
@@ -264,11 +263,23 @@ margin: 0 auto;
 
 .section1 {
     height: fit-content;
-    background-color: rgba(251, 246, 242, 0.725);
+    background-color: rgb(251, 246, 242);
     display: flex;
     padding-top: 4rem;
+    position: relative;
     justify-content: center;
+}
 
+.section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+background-color: rgb(251, 246, 242);
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .content-book-wrap {
@@ -370,12 +381,24 @@ button:hover {
 }
 
 .copyright {
-
     width: 100%;
-    background-color: rgb(4, 15, 40);
+    background-color: #191919;
     padding: 60px;
     padding-bottom: 0;
     margin: 0 auto;
+    position: relative;
+}
+
+.copyright::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    background-color: #191919;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
 .box-wrap {

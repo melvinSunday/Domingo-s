@@ -322,3 +322,5 @@ hamburger.addEventListener("click", () => {
 document
   .querySelectorAll(".navlinks a")
   .forEach((n) => n.addEventListener("click", closeDropdownMenu));
+
+////

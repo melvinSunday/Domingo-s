@@ -234,42 +234,42 @@ window.onload = function () {
 
 ///note
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the current section from the URL
-  var currentSection = window.location.hash
-    ? window.location.hash.substring(1)
-    : "Home";
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Get the current section from the URL
+//   var currentSection = window.location.hash
+//     ? window.location.hash.substring(1)
+//     : "Home";
 
-  // Show the note immediately without any animation if the current section is "Home"
-  if (currentSection === "Home") {
-    var note = document.getElementById("note");
-    note.style.opacity = 1; // Show immediately without animation
-  }
+//   // Show the note immediately without any animation if the current section is "Home"
+//   if (currentSection === "Home") {
+//     var note = document.getElementById("note");
+//     note.style.opacity = 1; // Show immediately without animation
+//   }
 
-  // Fade out the note when the "Okay" button is clicked
-  var okayButton = document.getElementById("okayButton");
-  okayButton.addEventListener("click", function () {
-    fadeOut(note, 1000); // Adjust the duration of the fade-out effect as needed (in milliseconds)
-  });
-});
+//   // Fade out the note when the "Okay" button is clicked
+//   var okayButton = document.getElementById("okayButton");
+//   okayButton.addEventListener("click", function () {
+//     fadeOut(note, 1000); // Adjust the duration of the fade-out effect as needed (in milliseconds)
+//   });
+// });
 
-function fadeOut(element, duration) {
-  var opacity = 1;
-  var interval = 50; // Adjust the interval of opacity change as needed
-  var gap = interval / duration;
+// function fadeOut(element, duration) {
+//   var opacity = 1;
+//   var interval = 50; // Adjust the interval of opacity change as needed
+//   var gap = interval / duration;
 
-  function fadeOutInterval() {
-    opacity -= gap;
-    element.style.opacity = opacity;
+//   function fadeOutInterval() {
+//     opacity -= gap;
+//     element.style.opacity = opacity;
 
-    if (opacity <= 0) {
-      clearInterval(fadeOutTimer);
-      element.style.display = "none";
-    }
-  }
+//     if (opacity <= 0) {
+//       clearInterval(fadeOutTimer);
+//       element.style.display = "none";
+//     }
+//   }
 
-  var fadeOutTimer = setInterval(fadeOutInterval, interval);
-}
+//   var fadeOutTimer = setInterval(fadeOutInterval, interval);
+// }
 
 /////hamburger menu
 // Function to close the dropdown menu

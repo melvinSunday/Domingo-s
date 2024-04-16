@@ -807,8 +807,8 @@ border-bottom: 2px solid orange;
 }
 
 .text-content p:nth-child(2) {
-    font-family: 'jost';
-    font-weight: bold;
+    font-family: 'nunito';
+    font-weight: 900;
     font-size: 1.3rem;
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.152);

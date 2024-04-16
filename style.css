@@ -73,12 +73,14 @@ body {
 }
 
 header {
-    position: fixed;
+
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
     left: 0;
+position: relative;
+left: 50%;
+    transform: translateX(-50%);
     margin: 0 auto;
     z-index: 9;
     transition: background-color 0.5s ease;
@@ -1014,7 +1016,6 @@ word-wrap: break-word;
     justify-content: space-evenly;
     padding: 20px;
     border-radius: 5px;
-    background-color: #f9f9f9;
 }
 
 .form-wrap iframe {

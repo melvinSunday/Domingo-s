@@ -229,7 +229,32 @@ function openMenu(evt, menuName) {
   evt.currentTarget.className += " active";
 }
 window.onload = function () {
-  document.querySelector(".tablink").click();
+  // Get the overlay and note elements
+  var overlay = document.getElementById("overlay");
+  var note = document.getElementById("note");
+  var okayButton = document.getElementById("okayButton");
+
+  // Show the overlay and note when the page loads
+  overlay.style.display = "block";
+  note.style.display = "block";
+
+  // When the "Okay" button is clicked, hide the overlay and note
+  okayButton.onclick = function () {
+    overlay.style.display = "none";
+    note.style.display = "none";
+  };
+
+  // Get all the tablink buttons
+  var tablinks = document.getElementsByClassName("tablink");
+
+  // Loop through the buttons and find the one with 'Breakfast' in the innerHTML
+  for (var i = 0; i < tablinks.length; i++) {
+    if (tablinks[i].innerHTML.includes("Breakfast")) {
+      // Trigger the click event on the 'Breakfast' tab
+      tablinks[i].click();
+      break;
+    }
+  }
 };
 
 ///note
@@ -302,21 +327,3 @@ hamburger.addEventListener("click", () => {
 document
   .querySelectorAll(".navlinks a")
   .forEach((n) => n.addEventListener("click", closeDropdownMenu));
-
-////note-overlay
-window.onload = function () {
-  // Get the overlay and note elements
-  var overlay = document.getElementById("overlay");
-  var note = document.getElementById("note");
-  var okayButton = document.getElementById("okayButton");
-
-  // Show the overlay and note when the page loads
-  overlay.style.display = "block";
-  note.style.display = "block";
-
-  // When the "Okay" button is clicked, hide the overlay and note
-  okayButton.onclick = function () {
-    overlay.style.display = "none";
-    note.style.display = "none";
-  };
-};

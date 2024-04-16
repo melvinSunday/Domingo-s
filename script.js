@@ -240,10 +240,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ? window.location.hash.substring(1)
     : "Home";
 
-  // Show the note with a fade-in effect only if the current section is "Home"
+  // Show the note immediately without any animation if the current section is "Home"
   if (currentSection === "Home") {
     var note = document.getElementById("note");
-    fadeIn(note, 1000); // Adjust the duration of the fade-in effect as needed (in milliseconds)
+    note.style.opacity = 1; // Show immediately without animation
   }
 
   // Fade out the note when the "Okay" button is clicked
@@ -252,26 +252,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fadeOut(note, 1000); // Adjust the duration of the fade-out effect as needed (in milliseconds)
   });
 });
-
-function fadeIn(element, duration) {
-  var opacity = 0;
-  var interval = 50; // Adjust the interval of opacity change as needed
-  var gap = interval / duration;
-
-  element.style.display = "block";
-  element.style.opacity = opacity;
-
-  function fadeInInterval() {
-    opacity += gap;
-    element.style.opacity = opacity;
-
-    if (opacity >= 1) {
-      clearInterval(fadeInTimer);
-    }
-  }
-
-  var fadeInTimer = setInterval(fadeInInterval, interval);
-}
 
 function fadeOut(element, duration) {
   var opacity = 1;
@@ -323,4 +303,20 @@ document
   .querySelectorAll(".navlinks a")
   .forEach((n) => n.addEventListener("click", closeDropdownMenu));
 
-////
+////note-overlay
+window.onload = function () {
+  // Get the overlay and note elements
+  var overlay = document.getElementById("overlay");
+  var note = document.getElementById("note");
+  var okayButton = document.getElementById("okayButton");
+
+  // Show the overlay and note when the page loads
+  overlay.style.display = "block";
+  note.style.display = "block";
+
+  // When the "Okay" button is clicked, hide the overlay and note
+  okayButton.onclick = function () {
+    overlay.style.display = "none";
+    note.style.display = "none";
+  };
+};

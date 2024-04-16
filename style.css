@@ -1069,21 +1069,32 @@ border-bottom: 2px solid orange;
 
 /*noteeee*/
 
-
 .note {
     position: fixed;
-    top: 95px;
+    top: 50%;
     left: 50%;
-    width: fit-content;
-    z-index: 99;
-    transform: translateX(-50%);
-background-image: linear-gradient(135deg, #fbf4ecdd 0%, #e2d1c3e0 100%);
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-image: linear-gradient(135deg, #fbf4ec 0%, #e2d1c3 100%);
     padding: 20px;
     border-radius: 10px;
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.701);
+    z-index: 99;
 }
 
+
+.note-open #overlay {
+    display: none;
+}
 .note p {
     margin: 0;
     text-align: justify;

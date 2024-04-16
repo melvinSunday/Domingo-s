@@ -111,7 +111,7 @@ header {
 }
 
 .navlinks .book {
-    background-color: #958660;
+background-color: #5b585897;
     padding: 10px;
     border-radius: 10px;
 }
@@ -927,24 +927,22 @@ button:hover {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .navlinks {
-        position: fixed;
-        top: 80px;
-        backdrop-filter: blur(15px);
-        border-radius: 20px;
-        width: 70%;
-        padding: 50px;
-background-color: #4d433aa0;
-        text-align: left;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, transform 0.3s, visibility 0s 0.3s;
-
-        box-shadow: 0 10px 20px -10px #ffffff9a;
-    }
-
+        .navlinks {
+            position: fixed;
+            top: 100px;
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            width: 90%;
+            padding: 50px;
+            background-color: #191919b5;
+            text-align: left;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, transform 0.3s, visibility 0s 0.3s;
+            box-shadow: 0 10px 20px -10px #ffffff9a;
+        }
     .navlinks.active {
         opacity: 1;
         visibility: visible;

@@ -986,12 +986,13 @@ border-bottom: 2px solid orange;
 }
 
 /*noteeee*/
+
+
 .note {
     position: fixed;
     top: 95px;
     left: 50%;
-    width: 100%;
-    max-width: 990px;
+width: fit-content;
     z-index: 99;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.9);
@@ -1193,7 +1194,9 @@ border-bottom: 2px solid orange;
 
 }
 @media(max-width:1038px) {
-    
+    .note {
+        width: 80%;
+    }
 
     .hamburger.active~.overlay,
     .navlinks.active~.overlay {
@@ -1592,6 +1595,10 @@ display: block;
 }
 
 @media(max-width:699px) {
+
+    .note {
+            width: 90%;
+        }
 .about-content-wrap {
         max-width: 600px;
     }

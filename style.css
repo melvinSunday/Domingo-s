@@ -816,6 +816,7 @@ border-bottom: 2px solid orange;
     line-height: 2;
     text-decoration: none;
     color: white;
+    word-wrap: break-word;
     font-family: 'nunito';
 }
 
@@ -912,11 +913,16 @@ color: #4D433A;
 .kahon i {
     font-size: 1.8rem;
     color: #EBB22F;
+    word-wrap: break-word;
 }
 
 .kahon a {
     text-decoration: underline;
     color: #666565;
+word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    hyphens: auto;
     transition: all 0.4s ease;
     font-family: 'nunito';
     cursor: pointer;
@@ -2007,5 +2013,14 @@ max-width: 400px;
 .section2 h3 {
 max-width: 800px;
 font-size: 2.1rem;
+}
+}
+
+@media(max-width:417px) {
+.tabs{
+width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 }

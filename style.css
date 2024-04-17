@@ -837,6 +837,7 @@ border-bottom: 2px solid orange;
     padding: 60px;
     padding-bottom: 0;
     margin: 0 auto;
+
     position: relative;
 }
 
@@ -1016,8 +1017,10 @@ border-bottom: 2px solid orange;
     margin-top: 40px;
     display: flex;
     justify-content: space-evenly;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 40px;
+    background-color: #e5e2e2;
+    border-radius: 20px;
+
 }
 
 .form-wrap iframe {
@@ -1095,9 +1098,12 @@ border-bottom: 2px solid orange;
 }
 
 
-.note-open #overlay {
+
+#overlay,
+#note {
     display: none;
 }
+
 .note p {
     margin: 0;
     text-align: justify;

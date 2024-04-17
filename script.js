@@ -241,15 +241,32 @@ function openMenu(evt, menuName) {
   document.getElementById(menuName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
 window.onload = function () {
   // Get the overlay and note elements
   var overlay = document.getElementById("overlay");
   var note = document.getElementById("note");
   var okayButton = document.getElementById("okayButton");
 
-  // Show the overlay and note when the page loads
-  overlay.style.display = "block";
-  note.style.display = "block";
+  // Function to show or hide the note based on the current section and referrer
+  var updateNoteDisplay = function () {
+    if (
+      (window.location.hash === "" || window.location.hash === "#Home") &&
+      !document.referrer.includes("booking.html")
+    ) {
+      overlay.style.display = "block";
+      note.style.display = "block";
+    } else {
+      overlay.style.display = "none";
+      note.style.display = "none";
+    }
+  };
+
+  // Update the note display when the page loads
+  updateNoteDisplay();
+
+  // Update the note display whenever the hash changes
+  window.addEventListener("hashchange", updateNoteDisplay);
 
   // When the "Okay" button is clicked, hide the overlay and note
   okayButton.onclick = function () {

@@ -144,6 +144,19 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+window.addEventListener("scroll", function () {
+  const images = document.querySelectorAll(".welcome");
+  const windowHeight = window.innerHeight;
+
+  images.forEach(function (image, index) {
+    const distanceFromTop = image.getBoundingClientRect().top;
+
+    if (distanceFromTop - windowHeight <= 0) {
+      image.classList.add("fadeInUp");
+      image.classList.add(`delay-${index}`);
+    }
+  });
+});
 
 ///animation3
 window.addEventListener("scroll", function () {

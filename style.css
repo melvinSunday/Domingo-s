@@ -501,6 +501,8 @@ header {
     width: 45%;
     display: flex;
     margin: 0 auto;
+            animation-duration: 3s;
+                animation-fill-mode: both;
     justify-content: center;
 
 }
@@ -510,6 +512,7 @@ header {
     width: 100%;
     padding: 20px;
     max-width: 900px;
+
 }
 
 .section2 .welcome {

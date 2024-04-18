@@ -2135,12 +2135,12 @@ border-bottom-left-radius: 10px;
 @media(max-width:430px) {
 
     .hamburger {
-            margin-top: 28px;
-            margin-right: 20px;
+            margin-top: 30px;
+            margin-right: 25px;
         }
     
         .Logo img {
-            width: 240px;
+            width: 250px;
         }
     
         .bar {

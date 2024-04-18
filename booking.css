@@ -762,8 +762,8 @@ button:hover {
 .hamburger {
     display: none;
     cursor: pointer;
-    margin-top: 25px;
-    margin-right: 20px;
+    margin-top: 34px;
+    margin-right: 30px;
     position: absolute;
     z-index: 9;
     right: 0;
@@ -795,15 +795,7 @@ button:hover {
 
 
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-right: 30px;
-    position: absolute;
-    z-index: 9;
-    right: 0;
-}
+
 
 
 
@@ -1086,6 +1078,12 @@ button:hover {
     }
 }
 
+@media(max-width:728px) {
+.Logo a {
+    margin: 0;
+}
+
+}
 @media(max-width:723px) {
     .spin-wrap {
         width: 100%;
@@ -1186,23 +1184,23 @@ button:hover {
     }
 }
 
-@media(max-width:352px) {
+@media(max-width:530px) { 
+
+.title h1 {
+    margin-top: 30px;
+    font-size: 3rem;
+}
+
+}
+@media(max-width:431px) {
+    .Logo a{
+        margin: 0;
+    }
 
     .section1 h1 {
         font-size: 1.9rem;
     }
 
-    .section3 h3 {
-        font-size: 1.6rem;
-    }
-
-    .section4 h1 {
-        font-size: 1.9rem;
-    }
-
-    .section4 p {
-        font-size: 1.8rem;
-    }
 
     .box h4 {
         font-size: 1.9rem;
@@ -1210,6 +1208,7 @@ button:hover {
 
     .hamburger {
         margin-top: 28px;
+        margin-right: 20px;
     }
 
     .Logo img {

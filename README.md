@@ -1,5 +1,7 @@
 # Domingo's Restaurant Website
 
+![Domingo's Restaurant Website Preview](images/domingos-preview.png)
+
 ## Description
 
 Domingo's is a responsive restaurant website showcasing a delightful dining experience. This project is a reverse-engineered website inspired by the templates available on HTML Codex. The site features a modern design with sections for home, services, about us, menu, and contact information.
@@ -26,6 +28,10 @@ Domingo's is a responsive restaurant website showcasing a delightful dining expe
 
 1. Home Page (index.html)
 2. Booking Page (booking.html)
+3. Service
+4. About
+5. Menu
+6. Contact
 
 ## Key Sections
 
